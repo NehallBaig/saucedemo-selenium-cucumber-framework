@@ -38,12 +38,13 @@
             <version>6.9.0</version>
         </dependency>
 
-        <!--I commented out PicoContainer as the dependencies are now managed using ScenarioContext functions such as setContext() and getContext().-->
-        <!--        <dependency>-->
-        <!--            <groupId>io.cucumber</groupId>-->
-        <!--            <artifactId>cucumber-picocontainer</artifactId>-->
-        <!--            <version>6.9.0</version>-->
-        <!--        </dependency>-->
+        <!--Added picocontainer to resolve empty constructor as picocontainer Constructor Injection
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>6.9.0</version>
+        </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
