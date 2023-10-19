@@ -3,7 +3,6 @@ package com.source.core;
 
 import com.source.utils.TestResultsListner;
 import com.source.utils.Utility;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,14 +10,16 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
+
 import java.lang.reflect.Method;
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Listeners(TestResultsListner.class)
 public class DriverManager {
 
-    public static int defaultTimeout = 2;
+    public static int defaultTimeout = 5;
     private Properties prop;
 
     String filePath = "";
@@ -62,16 +63,16 @@ public class DriverManager {
         String webUrl = prop.getProperty("webUrl");
 
         try {
-
             if (browserName.equalsIgnoreCase("chrome")) {
-                WebDriverManager.chromedriver().setup();
+                //Setup commands are not required in Selenium 4 driver, as dependencies have been set up by default by Bonigarcia.
+                //WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
 
             }
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(defaultTimeout, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(defaultTimeout));
             driverMap.put(testName, driver);
             System.out.println(webUrl);
 

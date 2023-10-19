@@ -16,15 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.3.1</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.1.2</version>
+            <version>4.13.0</version>
         </dependency>
 
         <dependency>
@@ -43,11 +37,13 @@
             <artifactId>cucumber-testng</artifactId>
             <version>6.9.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>6.9.0</version>
-        </dependency>
+
+        <!--I commented out PicoContainer as the dependencies are now managed using ScenarioContext functions such as setContext() and getContext().-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.cucumber</groupId>-->
+        <!--            <artifactId>cucumber-picocontainer</artifactId>-->
+        <!--            <version>6.9.0</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
