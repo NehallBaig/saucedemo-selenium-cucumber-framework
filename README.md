@@ -21,15 +21,32 @@ You can run the tests in two different ways:
 Run the following Maven command to execute the tests:
 mvn clean install
 
-Using Test Runner
+###Using Test Runner
 Right-click on the TestRunner.class file located under test\java\runners.
 Please note that this framework is designed to run scripts by executing feature files.
 
-Viewing Test Reports
+##Viewing Test Reports
 After running the tests, you can view the test report by opening the following file in your web browser:
 file path: target/cucumber-reports/cucumber.html
 
-Debugging
+## Test Coverage
+
+The test coverage for this project encompasses a wide range of scenarios, including:
+
+- **Positive Testing:** Test scenarios where valid data and user actions are expected to work smoothly.
+
+- **Negative Testing:** Test scenarios where invalid data and user actions are tested to ensure proper error handling.
+
+###Product Filtering and Cart Functionality:
+
+Sort products by Price (Low to High)
+Sort products by Price (High to Low)
+Sort products by Name A to Z
+Sort products by Name Z to A
+
+You can review the corresponding feature files under `test\java\resources\features` to explore the specific test scenarios and their coverage.
+
+##Debugging
 If you encounter issues while running the tests, it's worth noting that there may be a failure due to the behavior of cucumber-testng when using AbstractTestNGCucumberTests. Further investigation is needed to understand and address this issue.
 
 For additional assistance or information, feel free to refer to the project's documentation or reach out to the community for support.
