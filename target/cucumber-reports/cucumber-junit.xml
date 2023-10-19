@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.384">
-    <testcase classname="Login Screen" name="Login using valid credentials" time="0.027">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.675">
+    <testcase classname="Login Screen" name="Login using valid credentials" time="0.073">
         <failure message="Cannot invoke &quot;com.source.core.DriverManager.getDriver()&quot; because the return value of &quot;com.source.core.TestContext.getDriverManager()&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given I am on the Login page................................................failed
 When I login with standard user.............................................skipped
 Then I am on the Swag Labs homepage.........................................skipped
